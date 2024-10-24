@@ -1,103 +1,209 @@
-App.css
-
-body {
-  background-color: #f4f4f4;
-  font-family: Arial, sans-serif; /* Use a common font */
+/* Modern Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Card Style */
-.card {
-  background-color: #ffffff; /* White background for cards */
-  margin: 20px auto; /* Center horizontally */
-  max-width: 600px; /* Max width for the card */
-  padding: 20px; /* Padding inside the card */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-/* Container Styles */
-.login-container,
-.register-container,
-.upload-container {
+.hero {
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  color: #ffffff;
+  min-height: 100vh;
+  width: 100vw;
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  height: 80vh; /* Full height minus any other headers/footers */
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
 }
 
-/* Dashboard Header Style */
-.dashboard-header {
-  text-align: center; /* Center the text */
-  margin-bottom: 1.5rem; /* Spacing below the header */
-  font-size: 2rem; /* Larger font for the header */
-  font-weight: bold; /* Bold font */
-  color: #4f46e5; /* Indigo color */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
-/* Table Styles */
-.table {
-  width: 100%; /* Full width for the table */
-  border-collapse: collapse; /* Remove space between cells */
-  margin-top: 20px; /* Spacing above the table */
+.hero-content {
+  max-width: 800px;
+  text-align: center;
+  padding: 0 20px;
 }
 
-.table th,
-.table td {
-  border: 1px solid #d1d5db; /* Light gray border */
-  padding: 12px 15px; /* Padding inside cells */
-  text-align: left; /* Left-aligned text */
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
-.table th {
-  background-color: #4f46e5; /* Indigo background for header */
-  color: white; /* White text color */
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
 }
 
-.table tr:hover {
-  background-color: #e0f2fe; /* Light blue background on hover */
-}
-
-.table .present {
-  color: #22c55e; /* Green color for "Present" */
-  font-weight: bold; /* Bold text for emphasis */
-}
-
-.table .absent {
-  color: #ef4444; /* Red color for "Absent" */
-  font-weight: bold; /* Bold text for emphasis */
-}
-/* Button Styles */
 /* Button Styles */
 .button {
-  display: inline-flex; /* Use flex for alignment */
-  justify-content: center; /* Center text */
-  align-items: center; /* Center icon */
-  padding: 12px 24px; /* Padding around the text */
-  border-radius: 8px; /* Rounded corners */
-  font-size: 1rem; /* Font size */
-  font-weight: 600; /* Semi-bold font weight */
-  text-decoration: none; /* Remove underline */
-  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
-  margin: 0 8px; /* Add horizontal margin to both buttons */
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #2ecc71;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-.button.login {
-  background-color: #4f46e5; /* Indigo background for login */
-  color: white; /* White text */
+.button:hover {
+  background-color: #27ae60;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
 }
 
-.button.login:hover {
-  background-color: #4338ca; /* Darker indigo on hover */
-  transform: translateY(-2px); /* Slight lift on hover */
+/* Features Section */
+.features {
+  padding: 100px 0;
+  background-color: #ffffff;
 }
 
-.button.register {
-  border: 2px solid #4f46e5; /* Indigo border for register */
-  color: #4f46e5; /* Indigo text color */
-  background-color: white; /* White background */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
 }
 
-.button.register:hover {
-  background-color: #e0f2fe; /* Light blue background on hover */
-  transform: translateY(-2px); /* Slight lift on hover */
+.feature-item {
+  text-align: center;
+  max-width: 300px;
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+  color: #3498db;
+  margin-bottom: 5px;
+}
+
+.feature-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+.feature-item p {
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #f1f3f5;
+  padding: 100px 0;
+}
+
+.testimonial-slider {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-item {
+  padding: 20px;
+}
+
+.testimonial-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #3498db;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Button container */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.features-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
